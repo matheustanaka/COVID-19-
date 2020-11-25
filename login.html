@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <header id="login">
+        <nav>
+            <a href="welcome.html" class="logo">COVID-19</a>
+        </nav>  
+    </header>
+    <form action="/login" method="POST">
+
+        <h1>Faça seu Login</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Insira seus Dados</h2>
+            </legend>
+
+             <div class="field-group">
+                 <div class="field">
+                     <label for="email">E-mail</label>
+                     <input type="email" name="email" required>
+                 </div>
+             </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="pass">Senha</label>
+                    <input type="password" id="pass" name="password" minlength="8" required>
+                    </select>
+                </div>  
+            </div>
+        </fieldset>
+        <button type="submit"><a href="index.html">Fazer Login</a></button>
+    </form>
+</body>
+</html>

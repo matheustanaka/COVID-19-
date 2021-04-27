@@ -1,148 +1,146 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    overflow-y: hidden;
-    /*Bloqueia o scroll*/
+  overflow-y: hidden;
+  /*Bloqueia o scroll*/
 }
 
 .main {
-    width: 100%;
-    height: 110vh;
-    background: #fafafa url(/img/svg-gradient.svg) bottom right/contain no-repeat;
-    /* overflow: hidden; */
+  width: 100%;
+  height: 110vh;
+  background: #fafafa url(/img/svg-gradient.svg) bottom right/contain no-repeat;
+  /* overflow: hidden; */
 }
 
 nav {
-    width: 80%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin: 0 auto;
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #2c2c2c;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c2c2c;
 }
 
 ul {
-    display: flex;
+  display: flex;
 }
 
 li {
-    list-style: none;
-    margin-right: 2rem;
+  list-style: none;
+  margin-right: 2rem;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-btn {
-    padding: 15px 30px;
-    border-radius: 4px;
-    color: #fff;
-    transition: background-color 400ms;
+  padding: 15px 30px;
+  border-radius: 4px;
+  color: #fff;
+  transition: background-color 400ms;
 }
 
 .nav-btn:hover {
-    background: #26248f;
-    transition: background-color 400ms;
+  background: #26248f;
+  transition: background-color 400ms;
 }
 
 .main-content {
-    padding-top: 5rem;
-    max-width: 80%;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    position: relative;
-    justify-content: space-between;
-
+  padding-top: 5rem;
+  max-width: 80%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  justify-content: space-between;
 }
 
 .main-col-right {
-    width: 52%;
-    
+  width: 52%;
 }
 
 .main-col-left {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-img {
-    position: absolute;
-    top: 10%;
-    
+  position: absolute;
+  top: 10%;
 }
 
-.main-content h1, main-content p {
-    margin-bottom: 1.5rem;
+.main-content h1,
+main-content p {
+  margin-bottom: 1.5rem;
 }
 
 .main-content p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .email {
-    width: 300px;
-    height: 50px;
-    border: none;
-    border-left: 6px solid #5250fb;
-    border-radius: 4px;
-    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.25);
-    outline: none;
-    margin-bottom: 1.2rem;
-    margin-top: 1.2rem;
-    padding-left: 3rem;
-    transition: background-color 400ms;
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-left: 6px solid #5250fb;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.25);
+  outline: none;
+  margin-bottom: 1.2rem;
+  margin-top: 1.2rem;
+  padding-left: 3rem;
+  transition: background-color 400ms;
 }
 
 .icon {
-    padding-left: 25px;
-    margin-top: 1.2rem;
-    transform: translate(0%, 100%);
-    color: #5250fb;
-    width: 70px;
-    text-align: left;
-    position: absolute;
+  padding-left: 25px;
+  margin-top: 1.2rem;
+  transform: translate(0%, 100%);
+  color: #5250fb;
+  width: 70px;
+  text-align: left;
+  position: absolute;
 }
 
 .main-btn {
-    background: #5250FB;
-    padding: 14px 0;
-    border-radius: 4px;
-    font-size: 1rem;
-    border: none;
-    width: 200px;
-    text-align: center;
-    color: #fff;
-    transition: background-color 400ms;
+  background: #5250fb;
+  padding: 14px 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  transition: background-color 400ms;
 }
 
 .main-btn:hover {
-    background: #50cdfb;
-    transition: background-color 400ms;
+  background: #50cdfb;
+  transition: background-color 400ms;
 }
 
 .new-section {
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }

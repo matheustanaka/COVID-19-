@@ -1,29 +1,25 @@
 {
-  "name": "Covid-19",
+  "name": "covid-19",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "data.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheustanaka/Covid-19.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.0",
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.17.1",
-    "http-server": "^0.12.3",
-    "mongoose": "^5.10.15",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+  "bugs": {
+    "url": "https://github.com/matheustanaka/Covid-19/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
+  "homepage": "https://github.com/matheustanaka/Covid-19#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
   }
 }

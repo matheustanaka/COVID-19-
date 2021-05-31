@@ -3,10 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="styles/mapaStyle.css" media="screen" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa COVID-19</title>
   </head>
   <body>
-    <script type="module" src="app.js"></script>
+    <!-- <script type="module" src="app.js"></script> -->
+    <div id="map" class="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW6qfQaTnjuo6ti9_l28oS1pJwGNnY0Z4"></script>
+    <script type= "module">
+      import styleMap from './styles.js'
+      const $map = document.querySelector('#map')
+      const map = new window.google.maps.Map($map,{
+        center:{
+          lat:0,
+          long:0,
+        },
+        zoom:3,
+        styleMap
+      })
+
+      async function getData(){
+        const response = await fetch('https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/brief/latest?iso2=BR')
+        const data = await response.json()
+        return data
+      }
+
+      const popup = new window.google.maps.InfoWindow()
+
+      function renderDataExtra({confirmed, deaths, recovered, provincestate, countryregion}){
+        return (`
+        <div>
+          <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+          <p> confirmados: ${confirmed} </p>
+          <p> mortes: ${deaths} </p>
+          <p> recuperados: ${recovered} </p>
+        </div>
+        `)
+      }
+
+      function renderData(){
+        const data = await getData()
+        
+        data.forEach(item => {
+        const marcador = new window.google.maps.Marker({
+          position: {
+            lat: item.location.lat,
+            lng: item.location.lng
+          },
+          map,
+          icon: './icone-covid.png'
+          })
+          marcador.addListener('click',() =>{
+              popup.setContent(renderDataExtra(item))
+              popup.open (map, marcador)
+          })
+        })
+      }
+    </script>
   </body>
 </html>

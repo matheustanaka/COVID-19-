@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main-footer {
+  text-align: center;
+  background: #5250fb;
+  color: #fff;
+  padding: 15px;
+}

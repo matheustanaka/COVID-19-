@@ -29,6 +29,11 @@ nav {
   margin: 0 auto;
 }
 
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
 .logo {
   font-size: 2rem;
   font-weight: bold;

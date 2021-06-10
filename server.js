@@ -70,6 +70,10 @@ app.post("/acesso", (request, response) => {
   );
 });
 
+app.get("/status", (request, response) => {
+  response.sendFile(path.join(__dirname, "./src/views/status.html"));
+});
+
 //consulta
 //Selecionando O ID - no entanto, não estamos criando um ID no banco, somente login e senha
 app.post("/view", (request, response) => {

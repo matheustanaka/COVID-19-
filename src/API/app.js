@@ -17,7 +17,7 @@ let countries_list;
 let all_time_chart, days_chart, recover_rate_chart;
 
 window.onload = async () => {
-  console.log("pronto...");
+  console.log("ready...");
 
   initTheme();
 
@@ -51,11 +51,11 @@ loadData = async (country) => {
 };
 
 startLoading = () => {
-  body.classList.add("carregando");
+  body.classList.add("loading");
 };
 
 endLoading = () => {
-  body.classList.remove("carregando");
+  body.classList.remove("loading");
 };
 
 isGlobal = (country) => {
@@ -93,13 +93,9 @@ loadSummary = async (country) => {
   showRecoveredTotal(summary.TotalRecovered);
   showDeathsTotal(summary.TotalDeaths);
 
-  // Carrega taxa de recuperacao
-
   await loadRecoveryRate(
     Math.floor((summary.TotalRecovered / summary.TotalConfirmed) * 100)
   );
-
-  // Carrega tabela de paises
 
   let casesByCountries = summaryData.Countries.sort(
     (a, b) => b.TotalConfirmed - a.TotalConfirmed
@@ -359,8 +355,6 @@ loadRecoveryRate = async (rate) => {
   recover_rate_chart.updateSeries([rate]);
 };
 
-// dark mode
-
 initTheme = () => {
   let dark_mode_switch = document.querySelector("#darkmode-switch");
 
@@ -372,7 +366,6 @@ initTheme = () => {
   };
 };
 
-// Colocando dark mode para os charts
 setDarkChart = (dark) => {
   let theme = {
     theme: {
@@ -384,7 +377,6 @@ setDarkChart = (dark) => {
   recover_rate_chart.updateOptions(theme);
 };
 
-// Selecionando paises
 renderCountrySelectList = (list) => {
   let country_select_list = document.querySelector("#country-select-list");
   country_select_list.querySelectorAll("div").forEach((e) => e.remove());
@@ -423,7 +415,6 @@ loadCountrySelectList = async () => {
   renderCountrySelectList(countries_list);
 };
 
-// filtro de paises
 initContryFilter = () => {
   let input = document.querySelector("#country-select-list input");
   input.onkeyup = () => {

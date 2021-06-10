@@ -11,8 +11,8 @@ Covid-19 is a web application with the purpose of solve the problem with Fake Ne
 ![Home Page](./src/img/gitImages/welcome.png)
 ![Animation](./src/img/gitImages/animation.png)
 ![Content](./src/img/gitImages/content.png)
-![Data 2](./src/img/gitImages/data2.png)
-![Data](./src/img/gitImages/data.png)
+![Data 2](./src/img/gitImages/dashboard.png)
+![Data](./src/img/gitImages/dashboard2.png)
 
 ## Getting Started
 
@@ -37,12 +37,6 @@ Covid-19 is a web application with the purpose of solve the problem with Fake Ne
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Sass](https://sass-lang.com/)
-
-## Next Step
-
----
-
-Build a map of COVID around the world and try to set a graph that shows the evolution of the virus.
 
 ## License & Copyright
 
